@@ -1,37 +1,113 @@
 { pkgs, inputs, ... }: 
 
 { 
-  
+  #programs.gamemode.enable = true;
+
   home.packages =  
   [ # inputs.nix-gaming.packages.${pkgs.system}.<package>
   
   inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
   inputs.nix-gaming.packages.${pkgs.system}.roblox-player
   
-  ];
+  ]
   
- # ++ (inputs.nix-gaming.lib.legendaryBuilder pkgs
- #     {
- #       games = {
- #         etg = {
-##           desktopName = "Enter the Gungeon";
-#            tricks = ["dxvk" "win10"];
-#            icon = builtins.fetchurl {
-#             url = "https://icons.iconarchive.com/icons/papirus-team/papirus-apps/128/enter-the-gungeon-icon.png";
-#              name = "etg.png";
-#              sha256 = "90c7610f437347910389d21c89d3100741b5841d29f632174b555d13aa5acfb2";
-#            };
-#
-#            discordIntegration = false;
-#            gamemodeIntegration = false;
-#          };
-#	 
-#        opts = {
-        #   #same options as above can be provided here, and will be applied to all games
-        #   #NOTE: game-specific options take precedence
-     #     wine = inputs.nix-gaming.packages.${pkgs.system}.wine-tkg;
-#      };
-#     };
-#    });
+    # construct a list from the output attrset
+    ++ (inputs.nix-gaming.lib.legendaryBuilder pkgs
+      {
+        games = {
+          voidbastards = {
+            # find names with `legendary list`
+            desktopName = "Void Bastards";
 
+            # find out on lutris/winedb/protondb
+            tricks = ["dxvk" "win10"];
+
+            # google "<game name> logo"
+            #icon = builtins.fetchurl {
+            #  # original url = "https://www.pngkey.com/png/full/16-160666_rocket-league-png.png";
+            #  url = "https://user-images.githubusercontent.com/36706276/203341314-eaaa0659-9b79-4f40-8b4a-9bc1f2b17e45.png";
+            #  name = "rocket-league.png";
+            #  sha256 = "0a9ayr3vwsmljy7dpf8wgichsbj4i4wrmd8awv2hffab82fz4ykb";
+            #};
+
+            # if you don't want winediscordipcbridge running for this game
+            discordIntegration = false;
+            # if you dont' want to launch the game using gamemode
+            gamemodeIntegration = false;
+
+            preCommands = ''
+              echo "the game will start!"
+            '';
+
+            postCommands = ''
+              echo "the game has stopped!"
+            '';
+          };
+
+	  etg = {
+            # find names with `legendary list`
+            desktopName = "Enter the Gungeon";
+
+            # find out on lutris/winedb/protondb
+            #tricks = ["dxvk" "win10"];
+
+            # google "<game name> logo"
+            #icon = builtins.fetchurl {
+            #  # original url = "https://www.pngkey.com/png/full/16-160666_rocket-league-png.png";
+            #  url = "https://user-images.githubusercontent.com/36706276/203341314-eaaa0659-9b79-4f40-8b4a-9bc1f2b17e45.png";
+            #  name = "rocket-league.png";
+            #  sha256 = "0a9ayr3vwsmljy7dpf8wgichsbj4i4wrmd8awv2hffab82fz4ykb";
+            #};
+
+            # if you don't want winediscordipcbridge running for this game
+            discordIntegration = false;
+            # if you dont' want to launch the game using gamemode
+            gamemodeIntegration = false;
+
+            preCommands = ''
+              echo "the game will start!"
+            '';
+
+            postCommands = ''
+              echo "the game has stopped!"
+            '';
+          };
+
+	  salt-and-santuary = {
+            # find names with `legendary list`
+            desktopName = "Salt and Sanctuary";
+
+            # find out on lutris/winedb/protondb
+            tricks = ["dxvk" "win10"];
+
+            # google "<game name> logo"
+            #icon = builtins.fetchurl {
+            #  # original url = "https://www.pngkey.com/png/full/16-160666_rocket-league-png.png";
+            #  url = "https://user-images.githubusercontent.com/36706276/203341314-eaaa0659-9b79-4f40-8b4a-9bc1f2b17e45.png";
+            #  name = "rocket-league.png";
+            #  sha256 = "0a9ayr3vwsmljy7dpf8wgichsbj4i4wrmd8awv2hffab82fz4ykb";
+            #};
+
+            # if you don't want winediscordipcbridge running for this game
+            discordIntegration = false;
+            # if you dont' want to launch the game using gamemode
+            gamemodeIntegration = false;
+
+            preCommands = ''
+              echo "the game will start!"
+            '';
+
+            postCommands = ''
+              echo "the game has stopped!"
+            '';
+          };
+        };
+
+        opts = {
+          # same options as above can be provided here, and will be applied to all games
+          # NOTE: game-specific options take precedence
+          wine = inputs.nix-gaming.packages.${pkgs.system}.wine-tkg;
+        };
+      });
+  
 }

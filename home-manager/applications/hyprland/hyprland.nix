@@ -46,10 +46,10 @@ in {
       decoration = {
         rounding = 5;
         dim_inactive = true;
-	dim_strength = 0.1;
+	dim_strength = 0.15;
 	dim_special = 0;
 	active_opacity = 1.0;
-	inactive_opacity = 0.95;
+	inactive_opacity = 0.98;
 	# Blur !!
 	blur = {
 	  enabled = true;
@@ -59,6 +59,7 @@ in {
 	  brightness = 1.0;
           contrast = 1.0;
           noise = 0.02;
+	  special = false;
   	};
         # Shadows
 	drop_shadow = false;
@@ -90,22 +91,27 @@ in {
         force_default_wallpaper = 1;
 	enable_swallow = true;
       };
-      
+     
+      input = {
+        kb_layout = "ph,us(colemak_dh)";
+	kb_options = "grp:alt_shift_toggle";
+      };
+
       bind =
         [
           # Compositor Commands
           "$Mod, Q, killactive,"
           "$Mod, C, togglefloating,"
           "$Mod, S, togglesplit,"
-          "$Mod, H, movefocus, l"
-          "$Mod, J, movefocus, d"
-          "$Mod, K, movefocus, u"
-          "$Mod, L, movefocus, r"
-	  "$Mod, J, workspace, +1"
-	  "$Mod, K, workspace, -1"
+          "$Mod, M, movefocus, l"
+          "$Mod, N, movefocus, d"
+          "$Mod, E, movefocus, u"
+          "$Mod, I, movefocus, r"
+	  "$Mod, N, workspace, +1"
+	  "$Mod, E, workspace, -1"
 	  "$Mod, mouse_up, workspace, e+1"
 	  "$Mod, mouse_down, workspace, e-1"
-	  
+	    
           # Utility Commands
           "$SMod, Q, exec, wlogout"
           "ALT, Space, exec, rofi -show drun"

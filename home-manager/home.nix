@@ -15,7 +15,8 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./gtk.nix
-    .applications/hyprland/hyprland.nix
+    ./applications/hyprland/hyprland.nix
+    ./applications/steam/default.nix
     #./terminal/shell/fish.nix
     ./terminal/kitty.nix
     ./nix-gaming.nix
@@ -77,8 +78,7 @@
     rofi-wayland
     grimblast
     swappy
-    hyprpicker
-    pyprland
+    #pyprland
     wlsunset
     wlogout
     # Wine Packages
