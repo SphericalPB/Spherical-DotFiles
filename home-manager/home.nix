@@ -5,12 +5,13 @@
   lib,
   config,
   pkgs,
+  nix-colors,
   ...
 }: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
-    #inputs.nix-colors.homeManagerModule
+    nix-colors.homeManagerModule
 
     # Nix-Index Database
     inputs.nix-index-database.hmModules.nix-index
@@ -69,7 +70,7 @@
   };
 
   home.packages = with pkgs; [
-    catppuccin
+    #catppuccin
     qimgv
     vlc
     krita
