@@ -69,6 +69,7 @@
   };
 
   home.packages = with pkgs; [
+    catppuccin
     qimgv
     vlc
     krita
@@ -81,7 +82,6 @@
     swww
     rofi-wayland
     swappy
-    #pyprland
     wlsunset
     wlogout
     # Wine Packages
