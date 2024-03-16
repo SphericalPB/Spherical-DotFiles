@@ -36,23 +36,23 @@ in {
           # Hyprctl
           "$mod, F11, exec, hyprctl switchxkblayout evision-rgb-keyboard 1; notify-send -t 3000 'Using QWERTY Layout'"
           "$mod, F12, exec, hyprctl switchxkblayout evision-rgb-keyboard 0; notify-send -t 3000 'Using Colemak Layout'"
+
           # Utility Commands
           "$modShift, Q, exec, wlogout"
           "ALT, Space, exec, rofi -show drun"
+          "$mod, D, exec, notify-send 'Color Stolen! >:D' $(hyprpicker --autocopy)"
           "$mod, Return, exec, kitty"
           "$modShift, F, exec, vivaldi"
           "$modShift, E, exec, nemo"
 
-          # screenshot
-          # stop animations while screenshotting; makes black border go away
+          # Screenshot
+          # Fullscreen Screenshot
           ", Print, exec, grimblast --notify --cursor copysave output $shotDir"
+          # Select Area Screenshot
+          # stop animations while screenshotting; makes black border go away --fufexan
           "CTRL, Print, exec, ${screenshotarea}"
-          #"$mod, Print,"
-          #"CTRL, Print, exec, grimblast --notify --cursor copysave output"
-          #"$modShift CTRL, R, exec, grimblast --notify --cursor copysave output"
-
-          #"ALT, Print, exec, grimblast --notify --cursor copysave screen"
-          #"$mod SHIFT ALT, R, exec, grimblast --notify --cursor copysave screen"
+          # Annotate Select Area
+          "$mod, Print, exec, grimplast save area - | swappy -f -"
         ]
         ++ workspaces;
 

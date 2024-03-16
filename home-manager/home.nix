@@ -16,9 +16,9 @@
     inputs.nix-index-database.hmModules.nix-index
 
     # You can also split up your configuration and import pieces of it here:
-    ./nix-colors.nix
     ./applications
     ./terminal
+    ./nix-colors.nix
     ./nix-gaming.nix
   ];
 
@@ -80,7 +80,6 @@
     # Wayland/Hyprland Stuff
     swww
     rofi-wayland
-    grimblast
     swappy
     #pyprland
     wlsunset

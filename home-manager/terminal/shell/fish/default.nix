@@ -2,7 +2,10 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  nix-rebuild = "alejandra ~/.config/nix-conf; sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
+  hm-rebuild = "alejandra ~/.config/nix-conf; home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
+in {
   programs = {
     zoxide = {
       enable = true;
@@ -20,8 +23,8 @@
       set fish_greeting # Disables greeting
     '';
     shellAliases = {
-      hm-switch = "home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS";
-      rebuild-switch = "sudo nixos-rebuild switch --flake ~/.config/nix-conf#Spherical-NixOS";
+      rebuild-switch = "${nix-rebuild}";
+      hm-switch = "${hm-rebuild}";
       ls = "lsd";
       rm = "trash";
       rm-list = "trash-list";

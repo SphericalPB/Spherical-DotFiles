@@ -11,6 +11,12 @@
     ./pyprland.nix
   ];
 
+  home.packages = [
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+    inputs.hyprland-contrib.packages.${pkgs.system}.hyprprop
+    pkgs.hyprpicker
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
@@ -22,7 +28,6 @@
       "$mod" = "SUPER";
       "$modShift" = "SHIFT_SUPER";
       "$modAlt" = "ALT SUPER";
-      "$shotDir" = "/home/sphericalpb/Pictures/Screenshots/Desktop/$(date -u +%Y-%m-%d_%H%M%S).png";
 
       exec-once = [
         "sleep 5; swww init"
