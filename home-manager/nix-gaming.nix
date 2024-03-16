@@ -1,16 +1,16 @@
-{ pkgs, inputs, ... }: 
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  home.packages =
+    [
+      # inputs.nix-gaming.packages.${pkgs.system}.<package>
 
-{ 
-  #programs.gamemode.enable = true;
-
-  home.packages =  
-  [ # inputs.nix-gaming.packages.${pkgs.system}.<package>
-  
-  inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-  inputs.nix-gaming.packages.${pkgs.system}.roblox-player
-  
-  ]
-  
+      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+      pkgs.grapejuice
+      #inputs.nix-gaming.packages.${pkgs.system}.roblox-player
+    ]
     # construct a list from the output attrset
     ++ (inputs.nix-gaming.lib.legendaryBuilder pkgs
       {
@@ -44,7 +44,7 @@
             '';
           };
 
-	  etg = {
+          etg = {
             # find names with `legendary list`
             desktopName = "Enter the Gungeon";
 
@@ -73,7 +73,7 @@
             '';
           };
 
-	  salt-and-santuary = {
+          salt-and-santuary = {
             # find names with `legendary list`
             desktopName = "Salt and Sanctuary";
 
@@ -109,5 +109,4 @@
           wine = inputs.nix-gaming.packages.${pkgs.system}.wine-tkg;
         };
       });
-  
 }

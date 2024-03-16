@@ -2,7 +2,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      size = 10;
+      size = 11;
       name = "Hack";
     };
 
@@ -13,9 +13,9 @@
       allow_remote_control = "yes";
       enable_audio_bell = "no";
       visual_bell_duration = "0.1";
-      
+
       tab_bar_min_tabs = "1";
-      tab_bar_edge = "bottom";
+      tab_bar_edge = "top";
       tab_bar_align = "left";
       tab_bar_style = "powerline";
       tab_powerline_style = "slanted";
@@ -23,9 +23,8 @@
 
       selection_foreground = "none";
       selection_background = "none";
-
     };
 
-    theme = "Catppuccin-Mocha";
+    #theme = "Catppuccin-Mocha";
   };
 }

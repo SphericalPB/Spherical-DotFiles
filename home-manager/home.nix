@@ -10,15 +10,15 @@
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
+    #inputs.nix-colors.homeManagerModule
+
+    # Nix-Index Database
+    inputs.nix-index-database.hmModules.nix-index
 
     # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
-    ./gtk.nix
-    ./applications/hyprland/hyprland.nix
-    ./applications/steam/default.nix
-    #./terminal/shell/fish.nix
-    ./terminal/kitty.nix
+    ./nix-colors.nix
+    ./applications
+    ./terminal
     ./nix-gaming.nix
   ];
 
@@ -44,7 +44,6 @@
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "sphericalpb";
     homeDirectory = "/home/sphericalpb";
@@ -55,25 +54,30 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  #colorScheme = inputs.nix-colors.colorSchemes.dracula;
+
   # Add stuff for your user as you see fit:
-  programs.neovim.enable = true;
+  programs = {
+    neovim.enable = true;
+    home-manager.enable = true;
+    git = {
+      enable = true;
+      userName = "SphericalPB";
+      userEmail = "xdmaxgamer360@gmail.com";
+    };
+    #nix-index-database.comma.enable = true
+  };
 
   home.packages = with pkgs; [
-    (pkgs.discord.override {
-      withOpenASAR = true;
-      withVencord = true;
-    }) # Installs Discord With Open-ASAR and Vencord
-    vesktop # Discord Audio Sharing by Vencord Team
-    #steam
-    vivaldi
-    #obsidian # Waiting support for newer electron versions (25<)
-    joplin-desktop
     qimgv
     vlc
     krita
     gromit-mpx # Draw on thy desktop
+    cinnamon.nemo-with-extensions
+    libreoffice-fresh
+    pavucontrol
+    #obsidian # Waiting support for newer electron versions (25<)
     # Wayland/Hyprland Stuff
-    mako
     swww
     rofi-wayland
     grimblast
@@ -82,21 +86,27 @@
     wlsunset
     wlogout
     # Wine Packages
-    (pkgs.wineWowPackages.full.override {
+    (wineWowPackages.full.override {
       wineRelease = "staging";
       mingwSupport = true;
     })
     winetricks
-    legendary-gl
+    bottles
+    legendary-gl # Commandline tool for EpicGames
+    # Installs Discord with Vencord and OpenASAR
+    (discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
+    vesktop # Basically Webcord with Vencord
+    # Installs Vivaldi with proprietary video codecs
+    (vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = false;
+    })
+    vivaldi-ffmpeg-codecs
+    widevine-cdm
   ];
-
-  # Enable home-manager and git
-  programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "SphericalPB";
-    userEmail = "xdmaxgamer360@gmail.com";
-  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
