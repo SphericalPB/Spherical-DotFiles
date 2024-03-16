@@ -2,7 +2,7 @@
 ### Installation:
 
 Just clone the repo to the desired location, 
-then rebuild using:
+then rebuild using: \
 ``tldr: ~/[Path-to-Nix-Config]/#[Username]@[HostName]``
 ````
 sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS
