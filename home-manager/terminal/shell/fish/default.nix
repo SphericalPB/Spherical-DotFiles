@@ -6,8 +6,10 @@
   # Good lord... what a mess.
   # but hey atleast it works!
   # probably too well, somehow...
-  nix-rebuild = "alejandra ~/.config/nix-conf; sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
-  hm-rebuild = "alejandra ~/.config/nix-conf; home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
+  nix-conf-dir = "~/.config/nix-conf";
+  nixos-host = "Spherical-NixOS";
+  nix-user = "sphericalpb";
+  nix-commit = "cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
 in {
   programs = {
     zoxide = {
@@ -26,8 +28,8 @@ in {
       set fish_greeting # Disables greeting
     '';
     shellAliases = {
-      rebuild-switch = "${nix-rebuild}";
-      hm-switch = "${hm-rebuild}";
+      rebuild-switch = "alejandra ${nix-conf-dir}; sudo nix-rebuild switch --flake ${nix-conf-dir}/#${nix-user}@${nix-host}; ${nix-commit}";
+      hm-switch = "alejandra ${nix-conf-dir}; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nix-host}; ${nix-commit}";
       ls = "lsd";
       rm = "trash";
       rm-list = "trash-list";
