@@ -5,13 +5,12 @@
   lib,
   config,
   pkgs,
-  nix-colors,
   ...
 }: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
-    nix-colors.homeManagerModule
+    inputs.nix-colors.homeManagerModule
 
     # Nix-Index Database
     inputs.nix-index-database.hmModules.nix-index

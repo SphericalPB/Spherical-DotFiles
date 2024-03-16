@@ -1,16 +1,8 @@
 {
-  inputs,
   pkgs,
   config,
-  nix-colors,
   ...
 }: {
-  imports = [
-    nix-colors.homeManagerModule
-  ];
-
-  #colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
-
   programs = {
     kitty = {
       enable = true;
