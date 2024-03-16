@@ -18,3 +18,4 @@ Todo List
 - [ ] Either make nix-colors work or remove it entirely
 - [ ] Create a decent file structure
 - [ ] Add a place for nix-gaming.nix (or overall gaming related configs)
+- [ ] Figure out how nix global variables works
