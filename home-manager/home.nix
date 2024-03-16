@@ -9,16 +9,13 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    inputs.nix-colors.homeManagerModule
-
     # Nix-Index Database
     inputs.nix-index-database.hmModules.nix-index
 
     # You can also split up your configuration and import pieces of it here:
     ./applications
     ./terminal
-    ./nix-colors.nix
+    ./nix-colors
     ./nix-gaming.nix
   ];
 
@@ -53,8 +50,6 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     NIXOS_OZONE_WL = "1";
   };
-
-  colorScheme = inputs.nix-colors.colorSchemes.dracula;
 
   # Add stuff for your user as you see fit:
   programs = {
