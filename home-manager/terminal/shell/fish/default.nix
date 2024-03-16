@@ -3,6 +3,9 @@
   pkgs,
   ...
 }: let
+  # Good lord... what a mess.
+  # but hey atleast it works!
+  # probably too well, somehow...
   nix-rebuild = "alejandra ~/.config/nix-conf; sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
   hm-rebuild = "alejandra ~/.config/nix-conf; home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS; cd ~/.config/nix-conf; git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S); cd -";
 in {
