@@ -28,8 +28,8 @@ in {
       set fish_greeting # Disables greeting
     '';
     shellAliases = {
-      rebuild-switch = "alejandra ${nix-conf-dir}; sudo nix-rebuild switch --flake ${nix-conf-dir}/#${nix-user}@${nix-host}; ${nix-commit}";
-      hm-switch = "alejandra ${nix-conf-dir}; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nix-host}; ${nix-commit}";
+      rebuild-switch = "alejandra ${nix-conf-dir}; sudo nix-rebuild switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}";
+      hm-switch = "alejandra ${nix-conf-dir}; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}";
       ls = "lsd";
       rm = "trash";
       rm-list = "trash-list";
