@@ -2,13 +2,14 @@
   inputs,
   pkgs,
   config,
+  nix-colors,
   ...
 }: {
   imports = [
-    inputs.nix-colors.homeManagerModule
+    nix-colors.homeManagerModule
   ];
 
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
+  #colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   programs = {
     kitty = {
