@@ -44,8 +44,8 @@
         mark3_background = "#${config.colorscheme.palette.base0D}";
 
         # Black
-        color0 = "#${config.colorScheme.palette.base04}";
-        color8 = "#${config.colorScheme.palette.base03}";
+        color0 = "#${config.colorScheme.palette.base03}";
+        color8 = "#${config.colorScheme.palette.base04}";
 
         # Red
         color1 = "#${config.colorScheme.palette.base08}";
@@ -68,8 +68,8 @@
         color13 = "#${config.colorScheme.palette.base0E}";
 
         # Cyan
-        color6 = "#${config.colorScheme.palette.base0C}";
-        color14 = "#${config.colorScheme.palette.base0C}";
+        color6 = "#${config.colorScheme.palette.base07}";
+        color14 = "#${config.colorScheme.palette.base07}";
 
         # White
         color7 = "#${config.colorScheme.palette.base05}";
