@@ -60,8 +60,8 @@
         color11 = "#${config.colorScheme.palette.base0A}";
 
         # Blue
-        color4 = "#${config.colorScheme.palette.base07}";
-        color12 = "#${config.colorScheme.palette.base07}";
+        color4 = "#${config.colorScheme.palette.base0D}";
+        color12 = "#${config.colorScheme.palette.base0D}";
 
         # Magenta
         color5 = "#${config.colorScheme.palette.base0E}";
