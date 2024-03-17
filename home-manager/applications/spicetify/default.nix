@@ -24,7 +24,7 @@ in {
     enabledExtensions = with spicePkgs.extensions; [
       adblock
       lastfm
-      wikiify
+      wikify
       fullAppDisplay
       playlistIcons
       genre
