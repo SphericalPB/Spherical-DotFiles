@@ -18,7 +18,7 @@ in {
   # configure spicetify :)
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.comfy;
+    theme = spicePkgs.themes.Comfy;
     colorScheme = "catppuccin-macchiato";
 
     enabledExtensions = with spicePkgs.extensions; [
