@@ -27,7 +27,7 @@ in {
       wikify
       fullAppDisplay
       playlistIcons
-      genre
+      #genre # currently fucked on all spicetify versions
       goToSong
       skipOrPlayLikedSongs
       playNext
