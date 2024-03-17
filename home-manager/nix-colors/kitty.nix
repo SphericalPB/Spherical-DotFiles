@@ -44,8 +44,8 @@
         mark3_background = "#${config.colorscheme.palette.base0D}";
 
         # Black
-        color0 = "#${config.colorScheme.palette.base03}";
-        color8 = "#${config.colorScheme.palette.base04}";
+        color0 = "#${config.colorScheme.palette.base04}";
+        color8 = "#${config.colorScheme.palette.base03}";
 
         # Red
         color1 = "#${config.colorScheme.palette.base08}";
