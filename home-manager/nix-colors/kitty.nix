@@ -68,8 +68,8 @@
         color13 = "#${config.colorScheme.palette.base0E}";
 
         # Cyan
-        color6 = "#${config.colorScheme.palette.base07}";
-        color14 = "#${config.colorScheme.palette.base07}";
+        color6 = "#${config.colorScheme.palette.base0C}";
+        color14 = "#${config.colorScheme.palette.base0C}";
 
         # White
         color7 = "#${config.colorScheme.palette.base05}";
