@@ -5,6 +5,7 @@
 }: {
   imports = [
     inputs.nix-colors.homeManagerModules.default
+    ./fish
     ./kitty.nix
     ./mako.nix
   ];

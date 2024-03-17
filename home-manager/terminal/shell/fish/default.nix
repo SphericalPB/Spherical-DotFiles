@@ -31,6 +31,7 @@ in {
       rebuild-switch = "alejandra ${nix-conf-dir}; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}";
       hm-switch = "alejandra ${nix-conf-dir}; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}";
       ls = "lsd";
+      cat = "bat";
       rm = "trash";
       rm-list = "trash-list";
     };
