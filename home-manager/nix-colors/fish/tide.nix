@@ -15,8 +15,8 @@
       set tide_pwd_color_anchors ${config.colorScheme.palette.base0C}
       set tide_pwd_color_dirs ${config.colorScheme.palette.base0C}
       ## Time
-      set tide_time_bg_color ${config.colorScheme.palette.base04}
-      set tide_time_color ${config.colorScheme.palette.base05}
+      set tide_time_bg_color ${config.colorScheme.palette.base0F}
+      set tide_time_color ${config.colorScheme.palette.base02}
     '';
   };
 }
