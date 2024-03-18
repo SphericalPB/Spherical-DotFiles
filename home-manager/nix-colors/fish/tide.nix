@@ -6,8 +6,8 @@
   programs.fish = {
     shellInit = ''
       ## Frame
-      # set tide_color_frame_and_connection
-      set tide_color_separator_same_color ${config.colorScheme.palette.base04}
+      set tide_color_frame_and_connection ${config.colorScheme.palette.base03}
+      set tide_color_separator_same_color ${config.colorScheme.palette.base03}
       ## OS
       set tide_os_bg_color ${config.colorScheme.palette.base02}
       set tide_os_color ${config.colorScheme.palette.base05}
