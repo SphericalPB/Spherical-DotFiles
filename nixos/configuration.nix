@@ -93,6 +93,7 @@
         efiSupport = true;
         device = "nodev";
       };
+      systemd-boot.enable = false;
     };
   };
 
