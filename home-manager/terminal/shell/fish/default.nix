@@ -25,8 +25,12 @@ in {
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      set fish_greeting # Disables greeting
+      fish_vi_key_bindings
+      set fish_greeting # Disables default intro text
     '';
+    #shellInit = ''
+    #
+    #'';
     shellAliases = {
       rebuild-switch = "alejandra ${nix-conf-dir}; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; ${nix-commit}";
       hm-switch = "alejandra ${nix-conf-dir}; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}";

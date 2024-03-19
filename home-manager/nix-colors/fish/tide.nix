@@ -17,7 +17,7 @@
       set tide_pwd_color_dirs ${config.colorScheme.palette.base0C}
       ## Time
       set tide_time_bg_color ${config.colorScheme.palette.base02}
-      set tide_time_color ${config.colorScheme.palette.base0C}
+      set tide_time_color ${config.colorScheme.palette.base0D}
     '';
   };
 }
