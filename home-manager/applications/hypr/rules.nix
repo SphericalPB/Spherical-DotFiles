@@ -8,7 +8,7 @@
 
         "float, title:(Bitwarden -)(.*)$"
         "pin, title:(Bitwarden -)(.*)$"
-        "move 60% 09%, title:(Bitwarden -)(.*)$"
+        "move 62% 50%, title:(Bitwarden -)(.*)$"
       ];
       windowrulev2 = [
       ];
