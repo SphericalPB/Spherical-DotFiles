@@ -33,11 +33,10 @@
       exec-once = [
         "sleep 7; swww init"
         "wlsunset -l 13 -L 122"
-        "hyprctl set"
+        "easyeffects --gapplication-service"
       ];
       exec = [
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
-        "easyeffects --gapplication-service"
       ];
 
       general = {

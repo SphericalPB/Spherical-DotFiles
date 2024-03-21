@@ -52,7 +52,7 @@ in {
           # stop animations while screenshotting; makes black border go away --fufexan
           "CTRL, Print, exec, ${screenshotarea}"
           # Annotate Select Area
-          "$mod, Print, exec, grimplast save area - | swappy -f -"
+          "$mod, Print, exec, grimblast save area - | swappy -f -"
         ]
         ++ workspaces;
 
