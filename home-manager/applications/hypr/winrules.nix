@@ -3,11 +3,11 @@
    settings = { 
      windowrule = 
        [
-         "";
+         ""
        ];
      windowrulev2 = 
        [ 
-         "float, title:(.*)(- Bitwarden)$";
-         "pin, title:(.*)(- Bitwarden)$"; 
+         "float, title:(.*)(- Bitwarden)$"
+         "pin, title:(.*)(- Bitwarden)$"
        ];
 }
