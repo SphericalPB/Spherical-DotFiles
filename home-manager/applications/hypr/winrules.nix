@@ -1,5 +1,5 @@
 {
-  hyland.windowManager.hyprland = {
+  hyprland.windowManager.hyprland = {
     settings = {
       windowrule = [
         ""
