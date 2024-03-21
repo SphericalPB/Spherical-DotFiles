@@ -21,7 +21,6 @@ in {
       bind =
         [
           # Compositor Commands
-          "ALT SHIFT, , exec,"
           "$mod, Q, killactive,"
           "$mod, C, togglefloating,"
           "$mod, S, togglesplit,"
