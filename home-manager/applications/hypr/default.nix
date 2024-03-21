@@ -30,7 +30,7 @@
       "$modAlt" = "ALT SUPER";
 
       exec-once = [
-        "sleep 5; swww init"
+        "sleep 7; swww init"
         "wlsunset -l 13 -L 122"
         "hyprctl set"
       ];
