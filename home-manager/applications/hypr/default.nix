@@ -7,7 +7,7 @@
     inputs.hyprland.homeManagerModules.default
     # ./hyprstart.nix
     ./keybinds.nix
-    # ./windowrules.nix
+    ./winrules.nix
     ./pyprland.nix
   ];
 
