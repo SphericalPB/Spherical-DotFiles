@@ -1,5 +1,6 @@
 {
   inputs,
+  config,
   pkgs,
   ...
 }: {
@@ -91,7 +92,10 @@
       };
 
       misc = {
-        force_default_wallpaper = 0;
+        disable_hyprland_logo = true;
+        background_color = "rgb(${config.colorScheme.palette.base00})";
+        disable_splash_rendering = true;
+        vfr = true;
         enable_swallow = true;
       };
 
