@@ -1,5 +1,5 @@
 {
-  hyprland.windowManager.hyprland = {
+  wayland.windowManager.hyprland = {
     settings = {
       windowrule = [
         ""
