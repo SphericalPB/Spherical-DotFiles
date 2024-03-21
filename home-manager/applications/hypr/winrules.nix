@@ -10,4 +10,5 @@
          "float, title:(.*)(- Bitwarden)$"
          "pin, title:(.*)(- Bitwarden)$"
        ];
+  };     
 }
