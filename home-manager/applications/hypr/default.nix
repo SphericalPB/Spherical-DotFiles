@@ -37,6 +37,7 @@
       ];
       exec = [
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
+        "easyeffects --gapplication-service"
       ];
 
       general = {
