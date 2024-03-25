@@ -156,6 +156,8 @@
       };
     };
 
+    gvfs.enable = true;
+
     syncthing = {
       enable = true;
       openDefaultPorts = true;
@@ -270,7 +272,6 @@
       vulkan-tools
       gperftools
       pkgsi686Linux.gperftools
-      gvfs
       alsa-utils # Some Sound Utilities
       playerctl
       libnotify
