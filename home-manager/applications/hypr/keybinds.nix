@@ -17,7 +17,7 @@ let
 in {
   wayland.windowManager.hyprland = {
     settings = {
-      "$shotDir" = "~/Pictures/Screenshots/Desktop/$(date -u +%Y-%m-%d_%H%M%S)";
+      "$shotDir" = "~/Pictures/Screenshots/Desktop/$(date -u +%Y-%m-%d_%H%M%S).png";
       bind =
         [
           # Compositor Commands
