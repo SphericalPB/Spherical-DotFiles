@@ -1,3 +1,3 @@
 {config, ...}: {
-  programs.eww.configDir = "./eww";
+  programs.eww.configDir = "./eww/eww-notif";
 }
