@@ -1,23 +1,26 @@
-{ inputs, lib, config, pkgs, ... }:
-with lib;
-let
-    cfg = config.modules.eww;
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.modules.eww;
 in {
-    options.modules.eww = { enable = mkEnableOption "eww"; };
+  options.modules.eww = {enable = mkEnableOption "eww";};
 
-    config = mkIf cfg.enable {
-        # theres no programs.eww.enable here because eww looks for files in .config
-        # thats why we have all the home.files
+  config = mkIf cfg.enable {
+    # theres no programs.eww.enable here because eww looks for files in .config
+    # thats why we have all the home.files
 
-        # eww package
-        home.packages = with pkgs; [
-            eww-wayland
-        ];
+    # eww package
+    home.packages = with pkgs; [
+      eww-wayland
+    ];
 
-        # configuration
-        home.file.".config/eww/eww.scss".source = ./eww.scss;
-        home.file.".config/eww/eww.yuck".source = ./eww.yuck;
+    # configuration
+    home.file.".config/eww/eww.scss".source = ./eww.scss;
+    home.file.".config/eww/eww.yuck".source = ./eww.yuck;
   };
- };
 }
-
