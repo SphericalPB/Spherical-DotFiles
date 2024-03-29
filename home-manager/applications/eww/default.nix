@@ -5,6 +5,6 @@
 }: {
   programs.eww = {
     enable = true;
-    configDir = "./eww";
+    configDir = "/home/sphericalpb/.config/nix-conf/home-manager/applications/eww/eww";
   };
 }
