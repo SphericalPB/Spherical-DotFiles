@@ -1,6 +1,6 @@
 {config, ...}: {
   programs.eww = {
-    configDir = "./eww-notif";
+    configDir = "~/.config/eww/eww-notif";
   };
 
   home.file.".config/eww/eww-notif/eww.yuck".text = ''
