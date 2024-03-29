@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./eww-notif.nix
+    ./eww-notif
   ];
 
   programs.eww = {
