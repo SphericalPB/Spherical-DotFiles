@@ -1,9 +1,9 @@
 {config, ...}: {
-  programs.eww = {
-    configDir = "~/.config/eww/eww-notif";
-  };
+  #programs.eww = {
+  #  configDir = "~/.config/eww/eww-notif";
+  #};
 
-  home.file.".config/eww/eww-notif/eww.yuck".text = ''
+  home.file.".config/eww/eww.yuck".text = ''
     (defwindow notifications
                :monitor 0
         :geometry (geometry :x "20px"
