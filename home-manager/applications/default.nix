@@ -1,6 +1,7 @@
 {
   imports = [
     ./hypr
+    ./eww
     ./mako
     ./spicetify
     ./easyeffects
