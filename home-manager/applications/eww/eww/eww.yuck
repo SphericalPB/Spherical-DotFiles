@@ -1,7 +1,0 @@
-(defwindow notifications
-           :monitor 0
-           :geometry (geometry :x "20px"
-                               :y "20px"
-	                       :anchor "bottom right")
-           :stacking "overlay" # "fg" for X11 / "overlay" for Wayland
-           (label :text "SEGGS"))
