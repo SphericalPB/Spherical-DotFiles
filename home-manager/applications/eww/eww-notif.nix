@@ -1,8 +1,4 @@
 {config, ...}: {
-  #programs.eww = {
-  #  configDir = "~/.config/eww/eww-notif";
-  #};
-
   home.file.".config/eww/eww.yuck".text = ''
     (defwindow notifications
                :monitor 0
