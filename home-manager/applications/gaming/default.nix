@@ -12,7 +12,7 @@
     # inputs.nix-gaming.packages.${pkgs.system}.<package>
     pkgs.gamemode
     inputs.nix-gaming.packages.${pkgs.system}.osu-mime
-    osu-lazer-bin
+    osu-lazer
     #inputs.nix-gaming.packages.${pkgs.system}.osu-stable
     inputs.nix-gaming.packages.${pkgs.system}.roblox-player
   ];
