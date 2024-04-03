@@ -1,16 +1,6 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  home.packages =
-    [
-      # inputs.nix-gaming.packages.${pkgs.system}.<package>
-      pkgs.gamemode
-      inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
-      pkgs.grapejuice
-      #inputs.nix-gaming.packages.${pkgs.system}.roblox-player
-    ]
+{pkgs, ...}: {
+  home.packages = with pkgs;
+    []
     # construct a list from the output attrset
     ++ (inputs.nix-gaming.lib.legendaryBuilder pkgs
       {
