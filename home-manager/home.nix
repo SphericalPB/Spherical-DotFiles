@@ -51,6 +51,8 @@
     NIXOS_OZONE_WL = "1";
   };
 
+  xdg.userDirs.enable = true;
+
   # Add stuff for your user as you see fit:
   programs = {
     neovim.enable = true;

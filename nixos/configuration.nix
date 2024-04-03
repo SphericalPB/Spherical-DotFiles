@@ -257,6 +257,7 @@
   environment = {
     systemPackages = with pkgs; [
       colemak-dh
+      xdg-user-dirs
       cinnamon.nemo
       pavucontrol
       kitty
