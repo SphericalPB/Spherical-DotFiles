@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  inputs = [./legendary-egl.nix];
+  imports = [./legendary-egl.nix];
 
   home.packages = [
     # inputs.nix-gaming.packages.${pkgs.system}.<package>
