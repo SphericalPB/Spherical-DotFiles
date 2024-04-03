@@ -22,8 +22,8 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       # Extra Compatability Packages (custom option by nix-gaming)
-      extraCompatPackages = [
-        pkgs.proton-ge-bin
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
       ];
     };
   };
