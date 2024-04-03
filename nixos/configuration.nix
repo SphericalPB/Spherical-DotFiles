@@ -220,7 +220,7 @@
       package = pkgs.steam.override {
         extraLibraries = pkgs: [pkgs.gperftools pkgs.pkgsi686Linux.gperftools];
       };
-      remoteplay.openFirewall = true;
+      remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       #      extraCompatPackages = with pkgs; [proton-ge-bin];
     };
