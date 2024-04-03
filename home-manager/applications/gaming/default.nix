@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./legendary-egl.nix
-    outputs.steamcompattool
   ];
 
   home.packages = [
@@ -23,7 +22,7 @@
       };
       remoteplay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      extraCompatPackages = with pkgs; [proton-ge-bin];
+      extraCompatPackages = with pkgs; [proton-ge-bin]
     };
   };
 }
