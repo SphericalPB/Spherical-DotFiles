@@ -1,10 +1,12 @@
 {
   pkgs,
   inputs,
+  outputs,
   ...
 }: {
   imports = [
     ./legendary-egl.nix
+    output.steamcompattool
   ];
 
   home.packages = [
