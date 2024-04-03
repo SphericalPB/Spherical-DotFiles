@@ -16,7 +16,6 @@
     ./applications
     ./terminal
     ./nix-colors
-    ./nix-gaming.nix
   ];
 
   nixpkgs = {
