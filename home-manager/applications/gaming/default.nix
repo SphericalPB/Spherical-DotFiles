@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./legendary-egl.nix
-    output.steamcompattool
+    outputs.steamcompattool
   ];
 
   home.packages = [
