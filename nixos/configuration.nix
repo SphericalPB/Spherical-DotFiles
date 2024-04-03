@@ -227,7 +227,7 @@
       dedicatedServer.openFirewall = true;
       # Extra Compatability Packages (custom option by nix-gaming)
       extraCompatPackages = [
-        inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+        pkgs.proton-ge-bin
       ];
     };
   };
