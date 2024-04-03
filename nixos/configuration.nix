@@ -220,15 +220,13 @@
       enable = true;
       package = pkgs.steam.override {
         extraLibraries = pkgs: [pkgs.gperftools pkgs.pkgsi686Linux.gperftools];
-      };
-      remotePlay.openFirewall = true;
+      remoteplay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      extraCompatPackages = with pkgs; [
-        proton-ge-bin
-      ];
-    };
-  };
-
+      extraCompatPackages = with pkgs; [ proton-ge-bin ];
+      };
+      };
+      };
+    
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
