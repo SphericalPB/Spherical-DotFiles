@@ -17,9 +17,6 @@
     # xremap
     #inputs.xremap-flake.nixosModules.default
 
-    # nixos-gaming
-    inputs.nix-gaming.nixosModules.steamCompat
-
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -218,6 +215,7 @@
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
     };
+  programs = {
     steam = {
       enable = true;
       package = pkgs.steam.override {
@@ -225,9 +223,8 @@
       };
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      # Extra Compatability Packages (custom option by nix-gaming)
-      extraCompatPackages = [
-        pkgs.proton-ge-bin
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
       ];
     };
   };
