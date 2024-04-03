@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./legendary-egl.nix
-    # inputs.nix-gaming.nixosModules.steamCompat
   ];
 
   home.packages = [
@@ -14,18 +13,18 @@
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     pkgs.grapejuice
   ];
-  #programs = {
-  #  steam = {
-  #    enable = true;
-  #    package = pkgs.steam.override {
-  #      extraLibraries = pkgs: [pkgs.gperftools pkgs.pkgsi686Linux.gperftools];
-  #    };
-  #    remotePlay.openFirewall = true;
-  #    dedicatedServer.openFirewall = true;
-  #    # Extra Compatability Packages (custom option by nix-gaming)
-  #    extraCompatPackages = [
-  #      pkgs.proton-ge-bin
-  #    ];
-  #  };
-  #};
+  programs = {
+    steam = {
+      enable = true;
+      package = pkgs.steam.override {
+        extraLibraries = pkgs: [pkgs.gperftools pkgs.pkgsi686Linux.gperftools];
+      };
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      # Extra Compatability Packages (custom option by nix-gaming)
+      extraCompatPackages = [
+        pkgs.proton-ge-bin
+      ];
+    };
+  };
 }
