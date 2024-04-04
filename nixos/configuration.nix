@@ -22,7 +22,7 @@
     ./hardware-configuration.nix
   ];
 
-  outputs = [steamcompattool];
+  outputs = ["out" "steamcompattool"];
 
   nixpkgs = {
     # You can add overlays here
