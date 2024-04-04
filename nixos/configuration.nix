@@ -1,8 +1,9 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
+  out,
+  steamcompatool,
   inputs,
-  outputs,
   lib,
   config,
   pkgs,
@@ -21,8 +22,6 @@
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
-
-  outputs = ["out" "steamcompattool"];
 
   nixpkgs = {
     # You can add overlays here
