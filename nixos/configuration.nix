@@ -2,6 +2,7 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
   inputs,
+  outputs,
   lib,
   config,
   pkgs,
@@ -20,6 +21,8 @@
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
+
+  outputs = [steamcompattool];
 
   nixpkgs = {
     # You can add overlays here
@@ -222,7 +225,7 @@
       };
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      #      extraCompatPackages = with pkgs; [proton-ge-bin];
+      extraCompatPackages = with pkgs; [pkgs.proton-ge-bin];
     };
   };
 
