@@ -17,8 +17,6 @@
     # xremap
     #inputs.xremap-flake.nixosModules.default
 
-    inputs.steamcompattools.nixosModules.default
-
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -224,7 +222,9 @@
       };
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      extraCompatPackages = with pkgs; [pkgs.proton-ge-bin];
+      extraCompatPackages = with pkgs; [
+      proton-ge-bin
+      ]
     };
   };
 
