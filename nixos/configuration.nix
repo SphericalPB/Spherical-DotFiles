@@ -102,8 +102,8 @@
     };
     firewall = {
       enable = true;
-      allowedTCPPorts = [53317 8384 22000];
-      allowedUDPPorts = [22000 21027];
+      allowedTCPPorts = [53317 8384 22000 3131];
+      allowedUDPPorts = [22000 21027 139695];
     };
   };
 
@@ -183,8 +183,8 @@
           };
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
-            path = "/home/sphericalpb/Documents/Obsidian-Vault";
-            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+            path = "/home/sphericalpb/documents/obsidian-vault";
+            devices = ["spherical-tablet" "spherical-oppo"];
           };
         };
       };
