@@ -1,6 +1,5 @@
 {
   pkgs,
-  out,
   inputs,
   ...
 }: {
@@ -8,12 +7,10 @@
     ./legendary-egl.nix
   ];
 
-  home.packages = [
+  home.packages = with pkgs; [
     # inputs.nix-gaming.packages.${pkgs.system}.<package>
-    pkgs.gamemode
-    inputs.nix-gaming.packages.${pkgs.system}.osu-mime
-    pkgs.osu-lazer-bin
-    #inputs.nix-gaming.packages.${pkgs.system}.osu-stable
+    gamemode
+    osu-lazer-bin
     inputs.nix-gaming.packages.${pkgs.system}.roblox-player
   ];
 }
