@@ -48,7 +48,6 @@
     self,
     nixpkgs,
     home-manager,
-    steamcompattool,
     ...
   } @ inputs: let
     inherit (self) outputs;
