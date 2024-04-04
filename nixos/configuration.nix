@@ -1,7 +1,6 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
-  out,
   inputs,
   lib,
   config,
@@ -18,7 +17,7 @@
     # xremap
     #inputs.xremap-flake.nixosModules.default
 
-    outputs.nixosModules.steamcompattools
+    inputs.steamcompattools.nixosModules.default
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
