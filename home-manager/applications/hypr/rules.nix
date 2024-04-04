@@ -5,14 +5,13 @@
       # [https://wiki.hyprland.org/Configuring/Window-Rules]
       windowrule = [
         "pin, title:(Picture in picture)"
-        "opacity 0.3 override 0.3 override,title:(.*)(- Youtube - Vivaldi)$"
-        "float, title:(Bitwarden -)(.*)$"
-        "pin, title:(Bitwarden -)(.*)$"
-        "move 61% 10%, title:(Bitwarden -)(.*)$"
+        "float, initialtitle:(Bitwarden -)(.*),title:(Bitwarden -)(.*)$"
+        "pin, initialtitle:(Bitwarden -)(.*),title:(Bitwarden -)(.*)$"
+        "move 61% 10%, initialtitle:(Bitwarden -)(.*),title:(Bitwarden -)(.*)$"
       ];
       windowrulev2 = [
       ];
-      # Workspace Rules
+      # workspace rules
       # [https://wiki.hyprland.org/Configuring/Workspace-Rules]
       workspace = [
       ];
