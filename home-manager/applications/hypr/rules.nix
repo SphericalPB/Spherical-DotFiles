@@ -5,7 +5,7 @@
       # [https://wiki.hyprland.org/Configuring/Window-Rules]
       windowrule = [
         "pin, title:(Picture in picture)"
-
+        "opacity 0.3 override 0.3 override,title:(.*)(- Youtube)$"
         "float, title:(Bitwarden -)(.*)$"
         "pin, title:(Bitwarden -)(.*)$"
         "move 61% 10%, title:(Bitwarden -)(.*)$"
