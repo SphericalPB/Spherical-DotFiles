@@ -23,7 +23,7 @@
           mkdir $DIR
         }}
       '';
-      toggle_preview = ''        %{{
+      toggle-preview = ''        %{{
             if [ "$lf_preview" = "true" ]; then
                 lf -remote "send $id :set preview false; set ratios 1:5"
             else
