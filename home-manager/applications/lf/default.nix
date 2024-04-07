@@ -32,7 +32,7 @@
         }}'';
       setwallpaper = ''
         ''${{
-           %ln -s "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
+           ln -s "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
            swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png
            }}
       '';
