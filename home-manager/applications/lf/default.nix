@@ -72,7 +72,7 @@
         ${pkgs.pistol}/bin/pistol "$file"
       ''; 
       in
-      ''${previewer}/bin/pv.sh;'';
+      ''${previewer}/bin/pv.sh'';
     };
     extraConfig = 
       let
