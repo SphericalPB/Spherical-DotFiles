@@ -9,6 +9,7 @@
     enable = true;
     settings = {
       icons = true;
+      drawbox = true;
       preview = true;
     };
 
@@ -22,13 +23,30 @@
           mkdir $DIR
         }}
       '';
-      setwallpaper = '''';
+      toggle_preview = ''%{{
+    if [ "$lf_preview" = "true" ]; then
+        lf -remote "send $id :set preview false; set ratios 1:5"
+    else
+        lf -remote "send $id :set preview true; set ratios 1:2:3"
+    fi
+}}'';
+      setwallpaper = ''%ln -s "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png'';
     };
+
     keybindings = {
+       "\\\"" = "";
       o = "";
-      md = "mkdir";
+      c = "mkdir";
+      "." = "set hidden!";
+      "`" = "mark-load";
+      "\\'" = "mark-load";
+      "<enter>" = "open";
+      
       do = "dragon-out";
       ee = "editor-open";
+      md = "mkdir";
+      zp = "toggle-preview";
+      st = "setwallpaper"
     };
 
     previewer = {
