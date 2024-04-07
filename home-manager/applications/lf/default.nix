@@ -83,6 +83,5 @@
        in
        ''
          set cleaner ${cleaner}/bin/clean.sh
-       ''
-  };
+       '';
 }
