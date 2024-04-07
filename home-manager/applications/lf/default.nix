@@ -30,13 +30,17 @@
                 lf -remote "send $id :set preview true; set ratios 1:2:3"
             fi
         }}'';
-      setwallpaper = ''%ln -s "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png'';
+      setwallpaper = ''
+        ''${{
+           %ln -s "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
+           swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png
+           }}
+      '';
     };
 
     keybindings = {
       "\\\"" = "";
       o = "";
-      c = "mkdir";
       "." = "set hidden!";
       "`" = "mark-load";
       "\\'" = "mark-load";
