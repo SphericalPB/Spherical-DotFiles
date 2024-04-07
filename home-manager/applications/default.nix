@@ -3,6 +3,7 @@
     ./hypr
     ./eww
     ./mako
+    ./lf
     ./gaming
     ./spicetify
     ./easyeffects
