@@ -55,21 +55,34 @@
 
     previewer = {
       keybinding = "p";
-      source = pkgs.writeShellScriptBin "pv.sh" ''
+      source = let 
+        previewer = pkgs.writeShellScript "pv.sh" ''
         #!/usr/bin/env bash
-               file=$1
-               w=$2
-               h=$3
-               x=$4
-               y=$5
+        file=$1
+        w=$2
+        h=$3
+        x=$4
+        y=$5
 
-               if [[ "$( ${pkgs.file}/bin/file -Lb --mime-type "$file")" =~ ^image ]]; then
-               ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
-               exit 1
-               fi
-
-               ${pkgs.pistol}/bin/pistol "$file"
+        if [[ "$( ${pkgs.file}/bin/file -Lb --mime-type "$file")" =~ ^image ]]; then
+        ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
+        exit 1
+        fi
+        
+	${pkgs.pistol}/bin/pistol "$file"
       '';
+      in
+      ${previewer}/bin/pv.sh;
     };
+    extraConfig = 
+      let
+        cleaner = pkgs.witeShellScriptBin "clean.sh" ''
+	#!/usr/bin/env bash
+        ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
+        '';
+       in
+       ''
+         set cleaner ${cleaner}/bin/clean.sh
+       ''
   };
 }
