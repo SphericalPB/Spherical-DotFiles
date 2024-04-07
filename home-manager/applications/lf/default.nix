@@ -22,8 +22,10 @@
           mkdir $DIR
         }}
       '';
+      setwallpaper = '''';
     };
     keybindings = {
+      o = "";
       md = "mkdir";
       do = "dragon-out";
       ee = "editor-open";
