@@ -31,7 +31,7 @@
       "$modAlt" = "ALT SUPER";
 
       exec-once = [
-        "sleep 7; swww init"
+        "swww init; swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png"
         "wlsunset -l 13 -L 122"
         "easyeffects --gapplication-service"
       ];
@@ -49,7 +49,7 @@
       };
 
       decoration = {
-        rounding = 5;
+        rounding = 13;
         dim_inactive = true;
         dim_strength = 0.15;
         dim_special = 0;
