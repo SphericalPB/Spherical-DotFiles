@@ -31,10 +31,10 @@
             fi
         }}'';
       setwallpaper = ''
-        ''${{
-           ln -sf "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
-           swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png
-           }}
+            ''${{
+               swww img ~/Pictures/Wallpaper\ Stuff/wallhaven-yxgrql.jpg --transition-type grow --transition-step 120 --transition-pos $(hyprctl cursorpos) --invert-y
+        ln -sf "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
+               }}
       '';
     };
 
@@ -53,6 +53,7 @@
       st = "setwallpaper";
     };
 
+    # The fuck is this mess down here???
     previewer = {
       keybinding = "p";
       source = let
@@ -72,6 +73,7 @@
         '';
       in ''${previewer}/bin/pv.sh'';
     };
+
     extraConfig = let
       cleaner = pkgs.writeShellScriptBin "clean.sh" ''
         #!/usr/bin/env bash
