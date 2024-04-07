@@ -73,7 +73,7 @@
       in ''${previewer}/bin/pv.sh'';
     };
     extraConfig = let
-      cleaner = pkgs.witeShellScriptBin "clean.sh" ''
+      cleaner = pkgs.writeShellScriptBin "clean.sh" ''
         #!/usr/bin/env bash
                ${pkgs.kitty}/bin/kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty
       '';
