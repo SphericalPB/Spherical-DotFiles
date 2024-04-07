@@ -56,23 +56,23 @@
     previewer = {
       keybinding = "p";
       source = let 
-        previewer = pkgs.writeShellScript "pv.sh" ''
-        #!/usr/bin/env bash
+      previewer = 
+        pkgs.writeShellScriptBin "pv.sh" ''
         file=$1
         w=$2
         h=$3
         x=$4
         y=$5
-
+        
         if [[ "$( ${pkgs.file}/bin/file -Lb --mime-type "$file")" =~ ^image ]]; then
-        ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
-        exit 1
+            ${pkgs.kitty}/bin/kitty +kitten icat --silent --stdin no --transfer-mode file --place "''${w}x''${h}@''${x}x''${y}" "$file" < /dev/null > /dev/tty
+            exit 1
         fi
         
-	${pkgs.pistol}/bin/pistol "$file"
-      '';
+        ${pkgs.pistol}/bin/pistol "$file"
+      ''; 
       in
-      ${previewer}/bin/pv.sh;
+      ''${previewer}/bin/pv.sh;'';
     };
     extraConfig = 
       let
