@@ -45,7 +45,7 @@
     animation = "fromBottom"
     command = "kitty --class kitty-btop btop"
     class = "kitty-btop"
-    size = "60% 55%"
+    size = "60% 60%"
     margin = 20
     lazy = true
 
