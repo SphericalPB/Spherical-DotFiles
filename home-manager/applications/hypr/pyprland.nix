@@ -29,7 +29,7 @@
     class = "kitty-dropterm"
     size = "70% 55%"
     max_size = "1366px 100%"
-    margin = 15
+    margin = 10
     excludes = ["lf"]
 
     [scratchpads.lf]
@@ -38,7 +38,7 @@
     class = "kitty-lf"
     size = "70% 55%"
     max_size = "1366px 100%"
-    margin = 15
+    margin = 10
     excludes = ["term"]
 
     [scratchpads.btop]
