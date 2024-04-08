@@ -45,7 +45,7 @@
     animation = "fromLeft"
     command = "kitty --class kitty-btop btop"
     class = "kitty-btop"
-    size = "45% 85%"
+    size = "60% 50%"
     margin = 20
     lazy = true
 
