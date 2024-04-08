@@ -42,10 +42,10 @@
     excludes = ["term"]
 
     [scratchpads.btop]
-    animation = "fromLeft"
+    animation = "fromBottom"
     command = "kitty --class kitty-btop btop"
     class = "kitty-btop"
-    size = "60% 50%"
+    size = "60% 55%"
     margin = 20
     lazy = true
 
