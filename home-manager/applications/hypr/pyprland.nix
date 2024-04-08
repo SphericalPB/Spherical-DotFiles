@@ -12,7 +12,7 @@
       exec-once = ["pypr"];
       bind = [
         "$mod,A,exec,pypr toggle term"
-        "CTRL SHIFT, F, pypr toggle lf"
+        "CTRL SHIFT, F, exec, pypr toggle lf"
         "$modAlt,T,exec,pypr toggle btop"
         "$modAlt,V,exec,pypr toggle volume"
       ];
