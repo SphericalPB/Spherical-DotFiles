@@ -27,7 +27,7 @@
     animation = "fromTop"
     command = "kitty --class kitty-dropterm"
     class = "kitty-dropterm"
-    size = "65% 60%"
+    size = "70% 60%"
     max_size = "1366px 100%"
     margin = 15
     excludes = ["lf"]
@@ -36,7 +36,7 @@
     animation = "fromTop"
     command = "kitty --class kitty-lf lf"
     class = "kitty-lf"
-    size = "70% 60%"
+    size = "70% 55%"
     max_size = "1366px 100%"
     margin = 15
     excludes = ["term"]
@@ -45,14 +45,16 @@
     animation = "fromLeft"
     command = "kitty --class kitty-btop btop"
     class = "kitty-btop"
-    size = "55% 90%"
+    size = "45% 85%"
+    margin = 20
     lazy = true
 
     [scratchpads.volume]
     animation = "fromright"
     command = "pavucontrol"
     class = "pavucontrol"
-    size = "65% 90%"
+    size = "40% 85%"
+    margin = 20
     unfocus = "hide"
     hysteresis = 1
     lazy = true
