@@ -27,7 +27,7 @@
     animation = "fromTop"
     command = "kitty --class kitty-dropterm"
     class = "kitty-dropterm"
-    size = "70% 60%"
+    size = "70% 55%"
     max_size = "1366px 100%"
     margin = 15
     excludes = ["lf"]
@@ -45,7 +45,7 @@
     animation = "fromBottom"
     command = "kitty --class kitty-btop btop"
     class = "kitty-btop"
-    size = "60% 60%"
+    size = "75% 60%"
     margin = 20
     lazy = true
 
