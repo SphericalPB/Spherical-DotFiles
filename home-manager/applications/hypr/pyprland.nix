@@ -32,21 +32,21 @@
     margin = 20
     excludes = ["lf"]
 
-    #[scratchpads.lf]
-    #animation = "fromTop"
-    #command = "kitty --class kitty-lf lf"
-    #class = "kitty-lf"
-    #size = "75% 60%"
-    #max_size = "1366px 100%"
-    #margin = 20
-    #excludes = ["term"]
+    [scratchpads.lf]
+    animation = "fromTop"
+    command = "kitty --class kitty-lf lf"
+    class = "kitty-lf"
+    size = "75% 60%"
+    max_size = "1366px 100%"
+    margin = 20
+    excludes = ["term"]
 
-    #[scratchpads.btop]
-    #animation = "fromLeft"
-    #command = "kitty --class kitty-btop btop"
-    #class = kitty-btop
-    #size = "55% 90%"
-    #lazy = true
+    [scratchpads.btop]
+    animation = "fromLeft"
+    command = "kitty --class kitty-btop btop"
+    class = kitty-btop
+    size = "55% 90%"
+    lazy = true
 
     [scratchpads.volume]
     animation = "fromright"
