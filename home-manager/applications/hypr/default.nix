@@ -36,7 +36,6 @@
         "easyeffects --gapplication-service"
       ];
       exec = [
-        "swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png --transition-type wave --transition-wave 20,10 --transition-angle 135 --transition-step 120"
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
       ];
 
