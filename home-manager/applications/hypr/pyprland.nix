@@ -41,12 +41,12 @@
     margin = 20
     excludes = ["term"]
 
-    [scratchpads.btop]
-    animation = "fromLeft"
-    command = "kitty --class kitty-btop btop"
-    class = kitty-btop
-    size = "55% 90%"
-    lazy = true
+    #[scratchpads.btop]
+    #animation = "fromLeft"
+    #command = "kitty --class kitty-btop btop"
+    #class = kitty-btop
+    #size = "55% 90%"
+    #lazy = true
 
     [scratchpads.volume]
     animation = "fromright"
@@ -54,7 +54,7 @@
     class = "pavucontrol"
     size = "65% 90%"
     unfocus = "hide"
-    #hysteresis = 1
+    hysteresis = 1
     lazy = true
   '';
 }
