@@ -3,6 +3,7 @@
     ./hypr
     ./eww
     ./mako
+    ./btop
     ./lf
     ./gaming
     ./spicetify
