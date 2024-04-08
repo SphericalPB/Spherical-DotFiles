@@ -10,6 +10,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = ["pypr"];
+      exec = ["pypr"];
       bind = [
         "$mod,A,exec,pypr toggle term"
         "CTRL SHIFT, F, exec, pypr toggle lf"
