@@ -32,7 +32,7 @@
         }}'';
       setwallpaper = ''
             ''${{
-               swww img "$f" --transition-type grow --transition-step 120 --transition-pos $(hyprctl cursorpos) --invert-y
+               swww img --transition-type grow --transition-step 120 --transition-pos $(hyprctl cursorpos) --invert-y "$f"
         ln -sf "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
                }}
       '';
