@@ -32,7 +32,7 @@
         }}'';
       setwallpaper = ''
             ''${{
-               swww img ~/Pictures/Wallpaper\ Stuff/wallhaven-yxgrql.jpg --transition-type grow --transition-step 120 --transition-pos $(hyprctl cursorpos) --invert-y
+               swww img "$f" --transition-type grow --transition-step 120 --transition-pos $(hyprctl cursorpos) --invert-y
         ln -sf "$f" ~/.config/nix-conf/home-manager/applications/hypr/background.png
                }}
       '';
