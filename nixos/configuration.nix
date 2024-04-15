@@ -165,7 +165,7 @@
       configDir = "/home/sphericalpb/.config/syncthing";
       overrideDevices = true;
       overrideFolders = true;
-
+      # I still have zero idea how to make this actually work
       settings = {
         devices = {
           "Spherical-Tablet" = {id = "FT4YV2Q-P3G72Y4-06DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
