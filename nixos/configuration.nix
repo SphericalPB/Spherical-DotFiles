@@ -255,6 +255,7 @@
   # List packages installed in system profile.
   environment = {
     systemPackages = with pkgs; [
+      proton-ge-bin
       colemak-dh
       xdg-user-dirs
       cinnamon.nemo
