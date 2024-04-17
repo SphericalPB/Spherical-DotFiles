@@ -132,8 +132,8 @@
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-      extraPackages = [pkgs.amdvlk];
-      extraPackages32 = [pkgs.amdvlk pkgs.driversi686Linux.amdvlk];
+      extraPackages = [pkgs.mesa.drivers pkgs.amdvlk];
+      extraPackages32 = [pkgs.driversi686Linux.mesa.drivers pkgs.driversi686Linux.amdvlk];
     };
     # Setup Tablet with OpenTabletDriver
     opentabletdriver.enable = true;
