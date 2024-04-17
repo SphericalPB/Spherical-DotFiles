@@ -161,8 +161,8 @@
       guiAddress = "127.0.0.1:8384";
       user = "sphericalpb";
       group = "users";
-      dataDir = "/home/sphericalpb/.local/share/syncthing";
-      configDir = "/home/sphericalpb/.config/syncthing";
+      dataDir = "/home/sphericalpb/.local/share/syncthing/";
+      configDir = "/home/sphericalpb/.config/syncthing/";
       overrideDevices = true;
       overrideFolders = true;
       # I still have zero idea how to make this actually work
@@ -174,7 +174,7 @@
         folders = {
           "Pictures" = {
             id = "5h63m-h4upu";
-            path = "/home/sphericalpb/Pictures";
+            path = "/home/sphericalpb/Pictures/";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
             versioning = {
               type = "trashcan";
@@ -183,7 +183,7 @@
           };
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
-            path = "/home/sphericalpb/Documents/Obsidian-Vault";
+            path = "/home/sphericalpb/Documents/Obsidian-Vault/";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
           };
         };
@@ -255,7 +255,6 @@
   # List packages installed in system profile.
   environment = {
     systemPackages = with pkgs; [
-      proton-ge-bin
       colemak-dh
       xdg-user-dirs
       cinnamon.nemo
