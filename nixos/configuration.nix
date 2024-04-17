@@ -183,6 +183,7 @@
           };
 
           "Music-Stuff" = {
+            id = "mzeqq-kle9m";
             path = "/home/sphericalpb/Music";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
           };
