@@ -5,7 +5,7 @@ Just clone the repo to the desired location,
 then rebuild using: \
 ``Hint: ~/[Path-to-Nix-Config]/#[HostName]``
 ````
-sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS
+sudo nix-rebuild switch --flake ~/.config/nix-conf/#sphericalpb
 ````
 For Home-Manager Stuff:
 ``Hint: ~/[Path-to-Nix-Config]/#[Username]@[HostName]``
