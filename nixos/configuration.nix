@@ -190,7 +190,7 @@
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
             path = "/home/sphericalpb/Documents/Obsidian-Vault";
-            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+            devices = ["Spherical-Tablet"];
           };
         };
       };
