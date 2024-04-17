@@ -168,14 +168,14 @@
       # I still have zero idea how to make this actually work
       settings = {
         devices = {
-          Spherical-well = {id = "FT4YV2Q-P3G72Y4-O6DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
+          "Spherical-Tablet" = {id = "FT4YV2Q-P3G72Y4-O6DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
           "Spherical-Oppo" = {id = "K6POAM7-Z556KR-VLTG57G-J7LZNUG-FQ4TFEA-447R6WS-RLVKU7F-KCMEVA3";};
         };
         folders = {
           "Pictures" = {
             id = "5h63m-h4upu";
             path = "/home/sphericalpb/Pictures";
-            devices = ["Spherical-well" "Spherical-Oppo"];
+            devices = ["Spherical-Tablet" "Spherical-Oppo"];
             versioning = {
               type = "trashcan";
               params.cleanoutDays = "30";
@@ -184,13 +184,13 @@
 
           "Music-Stuff" = {
             path = "/home/sphericalpb/Music";
-            devices = ["Spherical-well"];
+            devices = ["Spherical-Tablet"];
           };
 
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
             path = "/home/sphericalpb/Documents/Obsidian-Vault";
-            devices = ["Spherical-well" "Spherical-Oppo"];
+            devices = ["Spherical-Tablet" "Spherical-Oppo"];
           };
         };
       };
