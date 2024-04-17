@@ -168,7 +168,7 @@
       # I still have zero idea how to make this actually work
       settings = {
         devices = {
-          "Spherical-well" = {id = "FT4YV2Q-P3G72Y4-06DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
+          Spherical-well = {id = "FT4YV2Q-P3G72Y4-06DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
           "Spherical-Oppo" = {id = "K6POAM7-Z556KR-VLTG57G-J7LZNUG-FQ4TFEA-447R6WS-RLVKU7F-KCMEVA3";};
         };
         folders = {
