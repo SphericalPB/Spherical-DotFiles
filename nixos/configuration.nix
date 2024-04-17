@@ -183,9 +183,9 @@
           };
 
           "Music-Stuff" = {
-	  path = "/home/sphericalpb/Music";
-	  devices = ["Spherical-well"];
-	  };
+            path = "/home/sphericalpb/Music";
+            devices = ["Spherical-well"];
+          };
 
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
