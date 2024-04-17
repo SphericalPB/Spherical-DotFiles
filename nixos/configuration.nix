@@ -161,20 +161,20 @@
       guiAddress = "127.0.0.1:8384";
       user = "sphericalpb";
       group = "users";
-      dataDir = "/home/sphericalpb/.local/share/syncthing/";
-      configDir = "/home/sphericalpb/.config/syncthing/";
+      dataDir = "/home/sphericalpb/.local/share/syncthing";
+      configDir = "/home/sphericalpb/.config/syncthing";
       overrideDevices = true;
       overrideFolders = true;
       # I still have zero idea how to make this actually work
       settings = {
         devices = {
-          "Spherical-Tablet" = {id = "FT4YV2Q-P3G72Y4-06DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
+          "Spherical-well" = {id = "FT4YV2Q-P3G72Y4-06DXAKA-XUZF4EX-BU7ZOQU-YKNKLGG-INQAQI5-WU2KKQN";};
           "Spherical-Oppo" = {id = "K6POAM7-Z556KR-VLTG57G-J7LZNUG-FQ4TFEA-447R6WS-RLVKU7F-KCMEVA3";};
         };
         folders = {
           "Pictures" = {
             id = "5h63m-h4upu";
-            path = "/home/sphericalpb/Pictures/";
+            path = "/home/sphericalpb/Pictures";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
             versioning = {
               type = "trashcan";
@@ -183,7 +183,7 @@
           };
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
-            path = "/home/sphericalpb/Documents/Obsidian-Vault/";
+            path = "/home/sphericalpb/Documents/Obsidian-Vault";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
           };
         };
