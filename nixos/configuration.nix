@@ -181,6 +181,12 @@
               params.cleanoutDays = "30";
             };
           };
+
+          "Music-Stuff" = {
+	  path = "/home/sphericalpb/Music";
+	  devices = ["Spherical-well"];
+	  };
+
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
             path = "/home/sphericalpb/Documents/Obsidian-Vault";
