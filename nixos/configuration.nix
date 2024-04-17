@@ -175,7 +175,7 @@
           "Pictures" = {
             id = "5h63m-h4upu";
             path = "/home/sphericalpb/Pictures";
-            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+            devices = ["Spherical-well" "Spherical-Oppo"];
             versioning = {
               type = "trashcan";
               params.cleanoutDays = "30";
@@ -184,7 +184,7 @@
           "Obsidian-Vault" = {
             id = "goywh-lr6bw";
             path = "/home/sphericalpb/Documents/Obsidian-Vault";
-            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+            devices = ["Spherical-well" "Spherical-Oppo"];
           };
         };
       };
