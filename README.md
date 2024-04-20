@@ -16,7 +16,8 @@ home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS
 
 ---
 Todo List 
-- [ x ] Either make nix-colors work or remove it entirely
+- [X] Either make nix-colors work or remove it entirely
+- [ ] Make a script for rebuilding and commiting config changes
 - [ ] Create a decent file structure
 - [ ] Add a place for nix-gaming.nix (or overall gaming related configs)
 - [ ] Figure out how nix global variables works

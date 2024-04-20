@@ -9,7 +9,6 @@
   nix-conf-dir = "~/.config/nix-conf";
   nixos-host = "Spherical-NixOS";
   nix-user = "sphericalpb";
-  nix-commit = "git commit -a -m $(date -u +%Y-%m-%d_%H:%M:%S)";
 in {
   programs = {
     zoxide = {
@@ -32,8 +31,9 @@ in {
       set EDITOR nvim
     '';
     shellAliases = {
-      rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; ${nix-commit}; popd";
-      hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; ${nix-commit}; popd";
+      rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; popd";
+      hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; popd";
+      nix-commit = "pushd ${nix-conf-dir}; printf 'What to call this commit? '; read NAME; git commit -a -m $NAME; git push; popd";
       ls = "lsd";
       cat = "bat";
       rm = "trash";
