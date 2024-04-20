@@ -33,7 +33,7 @@ in {
     shellAliases = {
       rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; popd";
       hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; popd";
-      nix-commit = "pushd ${nix-conf-dir}; printf 'What to call this commit? '; read NAME; git commit -a -m $NAME; git push; popd";
+      nix-commit = ''pushd ${nix-conf-dir}; read NAME -p 'echo "What to call this commit?"; echo "> "'; git commit -a -m $NAME; git push; popd'';
       ls = "lsd";
       cat = "bat";
       rm = "trash";
