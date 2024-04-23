@@ -17,8 +17,8 @@
         "$modAlt,T,exec,pypr toggle btop"
         "$modAlt,V,exec,pypr toggle volume"
         # toggle_special
-        "$mod, S, togglespecialworkspace, backdoor"
-        "$modShift, S, exec, pypr toggle_special backdoor"
+        "$mod, N, togglespecialworkspace, backdoor"
+        "$modShift, N, exec, pypr toggle_special backdoor"
       ];
     };
   };
