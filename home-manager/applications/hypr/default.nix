@@ -34,6 +34,9 @@
         "swww init; swww img ~/.config/nix-conf/home-manager/applications/hypr/background.png --transition-type wave --transition-wave 20,10 --transition-angle 135 --transition-step 120"
         "wlsunset -l 13 -L 122"
         "easyeffects --gapplication-service"
+        # Clipboard
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
       exec = [
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
