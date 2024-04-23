@@ -11,17 +11,21 @@
     settings = {
       exec-once = ["pypr"];
       bind = [
+        # scratchpads
         "$mod,A,exec,pypr toggle term"
         "CTRL SHIFT, F, exec, pypr toggle lf"
         "$modAlt,T,exec,pypr toggle btop"
         "$modAlt,V,exec,pypr toggle volume"
+        # toggle_special
+        "$mod, S, togglespecialworkspace, backdoor"
+        "$modShift, S, exec, pypr toggle_special backdoor"
       ];
     };
   };
 
   home.file.".config/hypr/pyprland.toml".text = ''
     [pyprland]
-    plugins = ["scratchpads"]
+    plugins = ["scratchpads", "toggle_special"]
 
     [scratchpads.term]
     animation = "fromTop"

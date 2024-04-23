@@ -40,6 +40,7 @@ in {
           # Utility Commands
           "$modShift, Q, exec, wlogout"
           "ALT, Space, exec, rofi -show drun"
+          "SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
           "$mod, D, exec, notify-send 'Color Stolen! >:D' $(hyprpicker --autocopy)"
           "$mod, Return, exec, kitty"
           "$modShift, F, exec, vivaldi"
