@@ -15,7 +15,10 @@ home-manager switch --flake ~/.config/nix-conf/#sphericalpb@Spherical-NixOS
 
 
 ---
-Todo List 
+Todo List
+URGENT: 
+REMOVE ``zoom-us`` from the NixOS config once school year is done
+
 - [X] Either make nix-colors work or remove it entirely
 - [ ] Make a script for rebuilding and commiting config changes
 - [ ] Create a decent file structure
