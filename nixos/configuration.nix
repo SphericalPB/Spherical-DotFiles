@@ -182,6 +182,12 @@
             };
           };
 
+          "Pinterest" = {
+            id = "s2j7h-9v0it";
+            path = "/home/sphericalpb/Pictures/Pinterest";
+            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+          };
+
           "Music-Stuff" = {
             id = "mzeqq-kle9m";
             path = "/home/sphericalpb/Music";
@@ -262,6 +268,7 @@
   # List packages installed in system profile.
   environment = {
     systemPackages = with pkgs; [
+      corefonts # Microsoft truetype fonts
       colemak-dh
       xdg-user-dirs
       cinnamon.nemo

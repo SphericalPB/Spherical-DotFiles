@@ -21,3 +21,8 @@ Todo List
 - [ ] Create a decent file structure
 - [ ] Add a place for nix-gaming.nix (or overall gaming related configs)
 - [ ] Figure out how nix global variables works
+
+New 
+- [ ] Install Microsoft Fonts
+- [ ] Move Syncthing to home-manager
+- [ ] Sync game files with Syncthing

@@ -97,6 +97,7 @@
         disable_splash_rendering = true;
         vfr = true;
         enable_swallow = true;
+        #swallow_regex = "kitty";
       };
 
       input = {

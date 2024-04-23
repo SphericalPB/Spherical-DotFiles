@@ -66,6 +66,7 @@
 
   home.packages = with pkgs; [
     #catppuccin
+    zoom-us # i hate
     qimgv
     vlc
     krita
