@@ -19,13 +19,16 @@
         # toggle_special
         "$mod, N, togglespecialworkspace, backdoor"
         "$modShift, N, exec, pypr toggle_special backdoor"
+        # magnify
+        "$mod, C, exec, pypr zoom ++0.5"
+        "$modShift, C, exec, pypr zoom"
       ];
     };
   };
 
   home.file.".config/hypr/pyprland.toml".text = ''
     [pyprland]
-    plugins = ["scratchpads", "toggle_special"]
+    plugins = ["scratchpads", "toggle_special", "magnify"]
 
     [scratchpads.term]
     animation = "fromTop"

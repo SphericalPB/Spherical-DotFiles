@@ -291,6 +291,7 @@
       libnotify
       glib
       wl-clipboard
+      wl-clip-persist
       cliphist
       trash-cli
       tldr

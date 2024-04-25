@@ -37,6 +37,7 @@
         # Clipboard
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "wl-clip-persist --clipboad regular"
       ];
       exec = [
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
