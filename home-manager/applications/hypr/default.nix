@@ -43,13 +43,15 @@
         "hyprctl setcursor 'oreo_catppuccin_mocha_cursors' 24"
       ];
 
+      env = ["WLR_DRM_NO_ATOMIC,1"];
+
       general = {
         gaps_in = 5;
         gaps_out = 15;
         border_size = 2;
         "col.active_border" = "rgb(b4befe) rgb(a6e3a1) 50deg";
         "col.inactive_border" = "rgb(45475a) rgb(1e1e2e) 50deg";
-        allow_tearing = false;
+        allow_tearing = true;
       };
 
       decoration = {

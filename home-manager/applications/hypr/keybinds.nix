@@ -22,7 +22,7 @@ in {
         [
           # Compositor Commands
           "$mod, Q, killactive,"
-          "$mod, D, togglefloating,"
+          "$mod, C, togglefloating,"
           "$mod, S, togglesplit,"
           "$modAlt, N, movefocus, l"
           "$modAlt, E, movefocus, d"

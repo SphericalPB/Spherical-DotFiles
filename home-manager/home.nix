@@ -94,7 +94,7 @@
       withOpenASAR = true;
       withVencord = true;
     })
-    vesktop # Basically Webcord with Vencord
+    #vesktop # Basically Webcord with Vencord
     # Installs Vivaldi with proprietary video codecs
     (vivaldi.override {
       proprietaryCodecs = true;

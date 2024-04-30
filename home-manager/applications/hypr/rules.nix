@@ -10,6 +10,7 @@
         "move 61% 10%, initialtitle:(Bitwarden -)(.*),title:(Bitwarden -)(.*)$"
       ];
       windowrulev2 = [
+        "immediate, class:^(steam_app_1966720)$"
       ];
       # workspace rules
       # [https://wiki.hyprland.org/Configuring/Workspace-Rules]

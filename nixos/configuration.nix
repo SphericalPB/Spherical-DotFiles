@@ -146,6 +146,14 @@
       videoDrivers = ["amdgpu"];
       displayManager.sddm.enable = true;
 
+      windowManager.awesome = {
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+          luarocks
+          luadbi-mysql
+        ];
+      };
+
       # Configure Keymaps in X11
       xkb = {
         layout = "us(colemak_dh),ph";
@@ -198,6 +206,15 @@
             id = "goywh-lr6bw";
             path = "/home/sphericalpb/Documents/Obsidian-Vault";
             devices = ["Spherical-Tablet" "Spherical-Oppo"];
+          };
+          "School-Stuff" = {
+            id = "aniky-jpbvd";
+            path = "/home/sphericalpb/Documents/schoo";
+            devices = ["Spherical-Tablet" "Spherical-Oppo"];
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "30";
+            };
           };
         };
       };

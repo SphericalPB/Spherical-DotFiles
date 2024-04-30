@@ -20,8 +20,8 @@
         "$mod, N, togglespecialworkspace, backdoor"
         "$modShift, N, exec, pypr toggle_special backdoor"
         # magnify
-        "$mod, C, exec, pypr zoom ++0.5"
-        "$modShift, C, exec, pypr zoom"
+        "$mod, D, exec, pypr zoom +2"
+        "$modShift, D, exec, pypr zoom"
       ];
     };
   };
