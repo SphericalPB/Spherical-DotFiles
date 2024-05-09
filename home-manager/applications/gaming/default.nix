@@ -12,6 +12,5 @@
     gamemode
     protonup-qt
     osu-lazer-bin
-    inputs.nix-gaming.packages.${pkgs.system}.roblox-player
   ];
 }

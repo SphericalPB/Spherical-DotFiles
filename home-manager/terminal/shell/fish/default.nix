@@ -7,7 +7,7 @@
   # but hey atleast it works!
   # probably too well, somehow...
   nix-conf-dir = "~/.config/nix-conf";
-  nixos-host = "Spherical-NixOS";
+  nix-host = "Spherical-NixOS";
   nix-user = "sphericalpb";
 in {
   programs = {
@@ -31,8 +31,10 @@ in {
       set EDITOR nvim
     '';
     shellAliases = {
-      rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; popd";
-      hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; popd";
+      #rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; sudo nixos-rebuild switch --flake ${nix-conf-dir}/#${nixos-host}; popd";
+      #hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; home-manager switch --flake ${nix-conf-dir}/#${nix-user}@${nixos-host}; popd";
+      rebuild-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; nh os switch -H ${nix-host}; popd";
+      hm-switch = "pushd ${nix-conf-dir}; alejandra .; git add .; nh home switch -c ${nix-user}@${nix-host}; popd";
       nix-commit = ''pushd ${nix-conf-dir}; read NAME -p 'echo "What to call this commit?"; echo "> "'; git commit -a -m $NAME; git push; popd'';
       ls = "lsd";
       cat = "bat";

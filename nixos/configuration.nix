@@ -235,6 +235,8 @@
     };
   };
 
+  virtualisation.waydroid.enable = true;
+
   security = {
     rtkit.enable = true; # Recommended for Pipewire stuff
     polkit.enable = true;
@@ -250,14 +252,15 @@
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       xwayland.enable = true;
     };
+
     steam = {
       enable = true;
       package = pkgs.steam.override {
         extraLibraries = pkgs: [pkgs.gperftools pkgs.pkgsi686Linux.gperftools];
       };
+      gamescopeSession.enable = true;
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
-      #extraCompatPackages = with pkgs; [proton-ge-bin];
     };
   };
 
@@ -293,6 +296,7 @@
       kitty
       polkit
       polkit_gnome # Login Promts for GUI Stuff
+      nh # nix-helper, literally better nix commands
       home-manager # Home-Manager for Nix
       alejandra
       statix
@@ -300,6 +304,8 @@
       manix
       nix-du
       nix-init
+      mangohud
+      protonup
       vulkan-tools
       gperftools
       pkgsi686Linux.gperftools
@@ -322,6 +328,8 @@
     sessionVariables = {
       WLR_NO_HARDWARE_CURSORS = "1"; # Incase if thy cursor turns invisible on wayland
       NIXOS_OZONE_WL = "1"; # Hint electron apps to use wayland
+      FLAKe = "/home/sphericalpb/.config/nix-conf"; # for nh (nix-helper)
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };
 

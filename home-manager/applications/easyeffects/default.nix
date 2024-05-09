@@ -3,6 +3,6 @@
 
   services.easyeffects = {
     enable = true;
-    preset = "Perfect EQ";
+    preset = "Bass Enhancing + Perfect EQ";
   };
 }
